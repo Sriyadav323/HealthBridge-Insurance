@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+**/node_modules/
+**/dist/
+**/target/
+**/src.backup/
+*.log
+*.zip
+*.bak
+*.tsbuildinfo
+.DS_Store
+__pycache__/
+*.pyc
+/.project-backups/

@@ -1,0 +1,110 @@
+<style>
+#hb-directions{font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+#hb-directions *{box-sizing:border-box}
+#hb-directions .hb{--ink:#173f35;--muted:#61766c;--paper:#f7f8ef;--panel:#fffef9;--accent:#196348;--hero:#143f33;--pop:#dcf49a;--soft:#eaf0df;--line:#dfe5d7;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:20px;overflow:hidden;min-height:770px;font-size:14px;line-height:1.5}
+#hb-directions .plum{--ink:#35213f;--muted:#796a7d;--paper:#fbf5f4;--panel:#fffdfb;--accent:#7a427c;--hero:#48234e;--pop:#ffd0ae;--soft:#f1e4ef;--line:#ebdfe5}
+#hb-directions .terra{--ink:#402e27;--muted:#7a6b62;--paper:#f7f0e5;--panel:#fffcf6;--accent:#a34732;--hero:#733c2e;--pop:#f6d68d;--soft:#f4e2d3;--line:#e5d8c7}
+#hb-directions button{font:inherit;color:inherit;min-height:38px;border-radius:10px;border:1px solid var(--line);background:var(--panel);padding:8px 13px}
+#hb-directions button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+#hb-directions .hb-top{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:23px 28px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+#hb-directions .logo{display:flex;gap:10px;align-items:center;font-weight:700;font-size:20px;letter-spacing:-.8px}
+#hb-directions .logo-mark{width:33px;height:33px;display:grid;place-items:center;background:var(--accent);border-radius:11px;color:#fff;font-size:25px;font-weight:400}
+#hb-directions .mode{display:flex;gap:4px;flex-wrap:wrap}
+#hb-directions .mode button{border:0;background:transparent;font-size:12px}
+#hb-directions .mode button[aria-pressed=true]{background:var(--soft);color:var(--accent)}
+#hb-directions .hb-layout{display:grid;grid-template-columns:176px minmax(0,1fr)}
+#hb-directions aside{padding:28px 15px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:9px}
+#hb-directions aside span{padding:11px 12px;color:var(--muted);font-size:12px}
+#hb-directions aside span:first-child{color:var(--accent);background:var(--soft);border-radius:11px;font-weight:600}
+#hb-directions .side-note{margin-top:auto;padding:18px 10px;color:var(--muted);font-size:11px}
+#hb-directions .hb-main{padding:28px;min-width:0}
+#hb-directions .eyebrow{font-size:10px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;margin:0 0 9px}
+#hb-directions .welcome{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:23px}
+#hb-directions h2{font-size:28px;line-height:1.2;letter-spacing:-1px;margin:0 0 7px;font-weight:600;color:inherit}
+#hb-directions p{margin:0 0 12px}
+#hb-directions .muted{color:var(--muted);font-size:12px}
+#hb-directions .avatar{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:var(--soft);flex-shrink:0}
+#hb-directions .hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;align-items:center;background:var(--hero);color:#fff9ee;padding:28px;border-radius:19px;gap:18px;min-height:244px}
+#hb-directions .hero h3{font-family:Georgia,serif;font-weight:400;font-size:35px;line-height:1.12;letter-spacing:-1px;margin:10px 0 14px;max-width:350px}
+#hb-directions .hero p{color:#f5eee2;font-size:12px;max-width:290px}
+#hb-directions .hero button{background:var(--pop);color:var(--hero);border:0;font-weight:650;font-size:12px}
+#hb-directions .hero-art{min-height:170px;position:relative;display:grid;place-items:center}
+#hb-directions .halo{position:absolute;width:170px;height:170px;border:1px solid #ffffff35;border-radius:50%;box-shadow:0 0 0 25px #ffffff0a,0 0 0 50px #ffffff05}
+#hb-directions .mini-id{position:relative;transform:rotate(-10deg);width:190px;padding:19px;background:var(--pop);color:var(--hero);border-radius:14px;box-shadow:0 14px 25px #0002}
+#hb-directions .mini-id strong{font-size:16px;letter-spacing:-.6px;display:block}
+#hb-directions .mini-id small{font-size:9px;letter-spacing:1px;display:block;margin:5px 0 24px}
+#hb-directions .mini-id span{font-size:11px;display:block}
+#hb-directions .banner-controls{display:flex;justify-content:space-between;align-items:center;margin:10px 0 22px;gap:8px}
+#hb-directions .banner-controls button{padding:4px 10px;min-height:30px;font-size:12px;background:transparent;border:0}
+#hb-directions .banner-label{color:var(--muted);font-size:11px}
+#hb-directions .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#hb-directions .stat{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px}
+#hb-directions .stat label{font-size:11px;color:var(--muted)}
+#hb-directions .stat strong{display:block;font-size:25px;letter-spacing:-1px;font-weight:600;margin:10px 0 3px}
+#hb-directions .stat small{font-size:11px;color:var(--muted)}
+#hb-directions .track{height:5px;background:var(--soft);border-radius:10px;margin-top:14px;overflow:hidden}
+#hb-directions .track span{display:block;height:100%;width:60%;background:var(--accent)}
+#hb-directions .quick-title{font-size:16px;font-weight:600;margin:24px 0 13px}
+#hb-directions .quick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+#hb-directions .quick button{display:flex;gap:10px;align-items:center;text-align:left;padding:15px 10px;font-size:11px;border:0;background:var(--soft)}
+#hb-directions .quick i{display:flex;flex-shrink:0}
+#hb-directions .foot{display:flex;justify-content:space-between;gap:10px;padding-top:22px;font-size:10px;color:var(--muted)}
+#hb-directions .plum .hb-layout{grid-template-columns:1fr}
+#hb-directions .plum aside{flex-direction:row;padding:12px 28px;border-right:0;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:2px}
+#hb-directions .plum aside span{padding:7px 14px}
+#hb-directions .plum .side-note{display:none}
+#hb-directions .plum .hb-main{padding:25px 36px}
+#hb-directions .plum .hero-art .mini-id{transform:rotate(9deg);border-radius:35px 10px 35px 10px}
+#hb-directions .plum .hero{border-radius:26px 26px 65px 26px;grid-template-columns:1.3fr 1fr}
+#hb-directions .plum .hero h3{font-family:ui-sans-serif,system-ui;font-weight:600;letter-spacing:-1.5px}
+#hb-directions .terra .hb-top{background:var(--hero);color:#fff8e9}
+#hb-directions .terra .mode button{color:#fff8e9;background:transparent}
+#hb-directions .terra .mode button[aria-pressed=true]{background:var(--pop);color:var(--hero)}
+#hb-directions .terra aside{width:148px;background:var(--paper)}
+#hb-directions .terra .hb-layout{grid-template-columns:148px minmax(0,1fr)}
+#hb-directions .terra .hero{border-radius:4px;background:var(--soft);color:var(--ink);border-top:3px solid var(--accent)}
+#hb-directions .terra .hero p{color:var(--muted)}
+#hb-directions .terra .hero button{background:var(--accent);color:#fff}
+#hb-directions .terra .halo{border-color:var(--line);box-shadow:0 0 0 25px #b98b4a0a,0 0 0 50px #b98b4a05}
+#hb-directions .terra .stat{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}
+#hb-directions .terra .quick button{border-radius:4px}
+#hb-directions .login{display:grid;grid-template-columns:1fr 1fr;min-height:600px;gap:40px;align-items:center}
+#hb-directions .login .hero{grid-template-columns:1fr;min-height:490px}
+#hb-directions .login label{font-size:12px;display:grid;gap:7px;margin:18px 0}
+#hb-directions .login input{padding:12px;border:1px solid var(--line);background:var(--panel);border-radius:9px;width:100%;font:inherit;color:var(--ink)}
+#hb-directions .main-action{background:var(--accent);color:#fff;border:0;width:100%}
+#hb-directions .admin-list{margin-top:22px;border-top:1px solid var(--line)}
+#hb-directions .member-row{display:flex;justify-content:space-between;gap:15px;padding:15px 0;border-bottom:1px solid var(--line);font-size:12px;flex-wrap:wrap}
+#hb-directions .pill{color:var(--accent);background:var(--soft);border-radius:20px;padding:3px 10px;font-size:11px}
+@media(max-width:700px){#hb-directions .hb{min-height:1130px}#hb-directions .hb-layout,#hb-directions .terra .hb-layout{grid-template-columns:1fr}#hb-directions aside{display:none}#hb-directions .terra aside{display:none}#hb-directions .hb-main,#hb-directions .plum .hb-main{padding:20px}#hb-directions .hb-top{padding:18px}#hb-directions .hero{grid-template-columns:1fr!important}#hb-directions .hero-art{min-height:150px}#hb-directions .stats{grid-template-columns:1fr}#hb-directions .stat strong{font-size:22px}#hb-directions .quick{grid-template-columns:1fr 1fr}#hb-directions .login{grid-template-columns:1fr;gap:22px}#hb-directions .login .hero{min-height:240px}#hb-directions .plum aside{display:none}#hb-directions .hero h3{font-size:30px}#hb-directions .foot{flex-wrap:wrap}}
+</style>
+<div id="hb-directions">
+<div class="viz-carousel" aria-label="HealthBridge premium design directions">
+<section data-variant="Emerald & citrus" aria-label="Emerald and citrus design"><div class="hb emerald" id="hb-emerald"></div></section>
+<section data-variant="Plum & peach" aria-label="Plum and peach design" hidden><div class="hb plum" id="hb-plum"></div></section>
+<section data-variant="Terracotta & cream" aria-label="Terracotta and cream design" hidden><div class="hb terra" id="hb-terra"></div></section>
+</div>
+</div>
+<script>
+(()=>{
+const root=document.getElementById('hb-directions');
+const slides=[{tag:'A LITTLE CLARITY. A LOT OF CONFIDENCE.',title:'Your health.<br>Your next chapter.',text:'Benefits, care, and everyday peace of mind. All in one thoughtful space.',action:'Explore your benefits',name:'Coverage highlights'}, {tag:'CARE THAT FITS YOUR LIFE',title:'Find your people.<br>Feel your best.',text:'Explore in-network providers and find the right care for your needs.',action:'Find a doctor',name:'Find care'}, {tag:'ALWAYS WITHIN REACH',title:'Less searching.<br>More living.',text:'Your member ID, ready whenever you need it. Keep your coverage close.',action:'View digital ID',name:'Digital member card'}];
+root.querySelectorAll('.hb').forEach((app)=>{
+let mode='Member',slide=0;
+const theme=app.id;
+function render(){
+const admin=mode==='Admin',login=mode==='Sign in';const s=slides[slide];
+app.innerHTML=`<header class="hb-top"><div class="logo"><span class="logo-mark">+</span>HealthBridge</div><div class="mode" aria-label="Preview portal">${['Member','Admin','Sign in'].map(x=>`<button type="button" class="cursor-interaction" data-mode="${x}" aria-pressed="${mode===x}">${x}</button>`).join('')}</div></header><div class="hb-layout"><aside aria-label="Navigation preview">${(admin?['Overview','Members','Register member']:['Overview','My benefits','My claims','Find a doctor','Digital ID','Pharmacy','My profile']).map(x=>`<span>${x}</span>`).join('')}<div class="side-note">A healthier connection.<br>Every step of the way.</div></aside><main class="hb-main">${login?`<div class="login"><div class="hero"><div><div class="eyebrow">HEALTHBRIDGE INSURANCE</div><h3>Good health starts<br>with feeling<br>looked after.</h3><p>Your coverage, care, and confidence. Beautifully connected.</p></div><div class="hero-art"><div class="halo"></div><div class="mini-id"><strong>HealthBridge +</strong><small>CARE, CONNECTED.</small><span>Your health. Your space.</span></div></div></div><form><p class="eyebrow">WELCOME TO YOUR SPACE</p><h2>A fresh start.<br>A familiar welcome.</h2><p class="muted">Member & administrator sign in</p><label>Email<input type="email" placeholder="you@example.com" autocomplete="off"></label><label>Password<input type="password" placeholder="Enter your password" autocomplete="off"></label><button type="submit" class="main-action cursor-interaction">Sign in →</button><p class="muted" style="margin-top:16px">Forgot password?</p></form></div>`:`<div class="welcome"><div><p class="eyebrow">${admin?'ADMINISTRATION':'YOUR PERSONAL HEALTH SPACE'}</p><h2>${admin?'A clearer view of care.':'Welcome back, Jordan.'}</h2><p class="muted">${admin?'People, plans, and the details that matter.':'A little more clarity for a healthier everyday.'}</p></div><span class="avatar">${admin?'AD':'JL'}</span></div>${admin?`<div class="stats"><div class="stat"><label>Total members</label><strong>1,248</strong><small>Demo workspace</small></div><div class="stat"><label>Active accounts</label><strong>1,196</strong><small>Member access enabled</small></div><div class="stat"><label>Pending setup</label><strong>52</strong><small>Awaiting password setup</small></div></div><div class="hero" style="margin-top:22px;min-height:180px"><div><p class="eyebrow">BUILT AROUND PEOPLE</p><h3>Great care starts<br>with a warm welcome.</h3><p>Bring a new member into the HealthBridge community.</p><button type="button" class="cursor-interaction" data-preview-action>Register a member →</button></div><div class="hero-art"><div class="halo"></div><div class="mini-id"><strong>Every member matters.</strong><small>CONNECTED FROM DAY ONE</small><span>Clear details. Confident beginnings.</span></div></div></div><h3 class="quick-title">Recent members</h3><div class="admin-list">${['Jordan Lee','Alex Morgan','Taylor Brooks'].map((n,i)=>`<div class="member-row"><span>${n}</span><span>HealthBridge ${i===1?'Essential HMO':'Gold PPO'}</span><span class="pill">${i===2?'Pending setup':'Active'}</span></div>`).join('')}</div>`:`<section class="hero" aria-label="Featured member resources"><div><div class="eyebrow">${s.tag}</div><h3>${s.title}</h3><p>${s.text}</p><button type="button" class="cursor-interaction" data-preview-action>${s.action} →</button></div><div class="hero-art" aria-hidden="true"><div class="halo"></div><div class="mini-id"><strong>HealthBridge +</strong><small>GOLD PPO · MEMBER CARD</small><span>JORDAN LEE</span><span>Coverage for your everyday.</span></div></div></section><div class="banner-controls"><span class="banner-label">${slide+1} / 3 · ${s.name}</span><div><button type="button" class="cursor-interaction" data-prev aria-label="Previous banner">←</button><button type="button" class="cursor-interaction" data-next aria-label="Next banner">→</button></div></div><div class="stats"><div class="stat"><label>Your plan</label><strong>Gold PPO</strong><small>● Active coverage</small></div><div class="stat"><label>Annual deductible</label><strong>$900 <small>of $1,500</small></strong><div class="track"><span></span></div></div><div class="stat"><label>Out-of-pocket spending</label><strong>$1,200 <small>of $5,000</small></strong><div class="track"><span style="width:24%"></span></div></div></div><h3 class="quick-title">What can we help you with?</h3><div class="quick">${[['heart-pulse','My benefits'],['file-text','Track a claim'],['stethoscope','Find a doctor'],['contact','Digital ID']].map(([icon,label])=>`<button type="button" class="cursor-interaction" data-preview-action><i data-lucide="${icon}" aria-hidden="true"></i>${label}</button>`).join('')}</div>`}<div class="foot"><span>HealthBridge Insurance · ${admin?'Administration':'Member portal'}</span><span>Illustrative preview · sample data</span></div>`}</main></div>`;
+app.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{mode=b.dataset.mode;render();}));
+app.querySelector('[data-prev]')?.addEventListener('click',()=>{slide=(slide+2)%3;render();});
+app.querySelector('[data-next]')?.addEventListener('click',()=>{slide=(slide+1)%3;render();});
+app.querySelector('form')?.addEventListener('submit',e=>{e.preventDefault();});
+app.querySelectorAll('[data-preview-action]').forEach(b=>b.addEventListener('click',()=>{b.textContent='Preview only · '+(admin?'registration':'member resource');}));
+if(globalThis.lucide)lucide.createIcons({attrs:{width:17,height:17}});
+}
+render();
+const state={radius:theme==='hb-terra'?4:19};
+if(globalThis.Tweak){const tweak=new Tweak({container:app,onChange:()=>{app.querySelectorAll('.hero').forEach(e=>e.style.borderRadius=state.radius+'px');}});tweak.addSlider(state,'radius',{label:'Banner corners',min:0,max:40,unit:'px'});}
+});
+})();
+</script>

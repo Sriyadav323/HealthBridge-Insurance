@@ -1,0 +1,144 @@
+.id-card-page {
+  max-width: 900px;
+}
+
+.id-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.id-card-actions button {
+  padding: 11px 18px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background: white;
+  color: var(--primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+.id-card-actions button.selected,
+.id-card-actions button:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.insurance-id-card {
+  width: 100%;
+  max-width: 650px;
+  min-height: 350px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, var(--primary), var(--navy));
+  color: white;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.id-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.id-card-header h2 {
+  color: white;
+  margin: 0;
+}
+
+.id-card-header p {
+  color: #e0ebc9;
+}
+
+.id-card-plan-type {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.id-card-member {
+  margin: 28px 0;
+}
+
+.id-card-member h3 {
+  color: white;
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+.insurance-id-card small {
+  display: block;
+  color: #e0ebc9;
+  margin-bottom: 5px;
+}
+
+.id-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.id-card-grid strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.id-card-back-details {
+  margin: 25px 0;
+  line-height: 1.8;
+}
+
+.id-card-note {
+  font-size: 13px;
+  color: #e0ebc9;
+}
+
+.id-card-disclaimer {
+  color: #617568;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .insurance-id-card {
+    padding: 20px;
+  }
+
+  .id-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 12mm;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .app-header,
+  .sidebar,
+  .no-print {
+    display: none !important;
+  }
+
+  .app-body,
+  .page-content {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .insurance-id-card {
+    box-shadow: none;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}

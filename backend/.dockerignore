@@ -1,0 +1,8 @@
+target
+src.backup
+.mvn
+.env*
+*.log
+*.zip
+*.bak
+.git
