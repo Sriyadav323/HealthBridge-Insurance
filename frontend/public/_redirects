@@ -1,0 +1,2 @@
+# Keep this last, after any /api/* proxy rule for the deployed backend.
+/* /index.html 200
