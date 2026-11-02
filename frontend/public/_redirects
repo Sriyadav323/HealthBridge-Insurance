@@ -1,2 +1,2 @@
-/api/* https://healthbridge-api-mnlc.onrender.com/api/:splat 200
+/api/* https://healthbridge-insurance.onrender.com/api/:splat 200
 /* /index.html 200
